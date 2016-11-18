@@ -1,0 +1,22 @@
+{
+   "first": 1,
+   "interval": 5,
+   "shell": "/bin/bash",
+   "os": "ubuntu",
+   "modules":[
+      {
+         "module":"list",
+         "continue":true,
+         "content": []
+      },
+      {
+         "module":"pic",
+         "continue":false,
+         "content": ["nav_logo242_hr.png"]
+      },
+      {
+         "module":"catcat",
+         "continue":false,
+         "content": []
+      }]
+}

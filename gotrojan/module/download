@@ -1,0 +1,14 @@
+$wc = New-Object Net.WebClient 
+$wc.Credentials = New-Object System.Net.NetworkCredential("guest", "guest")
+
+try {
+    $wc.DownloadFile("https://exapmle.com", "c:\temp\README.txt";)
+} 
+catch [Exception] 
+{
+    Write-Output $_.Exception.Message
+}
+finally
+{
+    $wc.Dispose()
+}

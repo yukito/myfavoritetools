@@ -1,0 +1,9 @@
+Add-Type -Assembly System.Windows.Forms
+$w = New-Object System.Windows.Forms.Form
+$pb = New-Object System.Windows.Forms.PictureBox
+$img = New-Object System.Drawing.Bitmap("./nav_logo242_hr.png")
+$pb.ClientSize = $img.Size
+$w.ClientSize = $img.Size
+$pb.Image = $img
+$w.Controls.Add($pb)
+$w.ShowDialog()

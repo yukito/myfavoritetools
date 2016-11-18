@@ -1,0 +1,2 @@
+ $ go run trojan.go -gitlab.skip-cert-check=true
+ $ go build -ldflags -H=windowsgui -installsuffix trojan.go
