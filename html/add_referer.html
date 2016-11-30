@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+</head>
+<body>
+<script>
+var xhr = new XMLHttpRequest();
+xhr.open( 'GET', 'http://10.32.201.158:8080', true );
+xhr.setRequestHeader( 'Content-Type', 'application/x-www-form-urlencoded' );
+xhr.setRequestHeader('Referer', 'http://example.com');
+xhr.send(null); 
+xhr.abort();
+</script>
+</body>
+</html>
