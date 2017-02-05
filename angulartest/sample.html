@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="myapp">
+<head>
+   <meta charset="UTF-8">
+   <title>Practice Angular</title>
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script>
+angular.module('myapp', [])
+    .controller('MainController', ['$scope', function($scope) {
+        $scope.users = [
+            {"name":"taguchi", "score":52.22},
+            {"name":"tanaka", "score":38.22},
+            {"name":"yamada", "score":11.11}
+        ];
+        $scope.today = new Date();
+    }]);
+</script>
+</head>
+<body>
+   <h1>Practice Angular</h1>
+   <input type="text" ng-model="name">
+   <p>Hello world!!{{name}}</p>
+   <p>Hello world!!{{5 * 3}}</p>
+   <div ng-controller="MainController">
+   {{today|date:'yyyy-MM-dd'}}
+      <p>{{users.length}}</p>
+      <li ng-repeat="user in users">
+         {{user.name}} {{user.score}}
+      </li>
+   </div>
+</body>
+</html>
